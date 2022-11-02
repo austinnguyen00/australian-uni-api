@@ -20,11 +20,11 @@ const UniTable = ({ universities }) => {
             <TableCell align='right'>Domains</TableCell>
           </TableRow>
         </TableHead>
-        {universities ? (
+        {universities.length > 0 ? (
           <TableBody>
-            {universities.map((university) => (
+            {universities.map((university, index) => (
               <TableRow
-                key={university.name}
+                key={university.name + '-' + index}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
                 <TableCell component='th' scope='row'>
