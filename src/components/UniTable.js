@@ -16,8 +16,7 @@ const UniTable = ({ universities }) => {
             <TableCell>University</TableCell>
             <TableCell align='right'>Code</TableCell>
             <TableCell align='right'>Country</TableCell>
-            <TableCell align='right'>State</TableCell>
-            <TableCell align='right'>Web Page</TableCell>
+            <TableCell align='right'>Web Pages</TableCell>
             <TableCell align='right'>Domains</TableCell>
           </TableRow>
         </TableHead>
@@ -33,11 +32,13 @@ const UniTable = ({ universities }) => {
                 </TableCell>
                 <TableCell align='right'>{university.alpha_two_code}</TableCell>
                 <TableCell align='right'>{university.country}</TableCell>
+
                 <TableCell align='right'>
-                  {university['state-province']}
+                  {university.web_pages.join(', ')}
                 </TableCell>
-                <TableCell align='right'>{university.web_pages}</TableCell>
-                <TableCell align='right'>{university.domains}</TableCell>
+                <TableCell align='right'>
+                  {university.domains.join(', ')}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
