@@ -10,6 +10,7 @@ const LoadButton = ({ setUniversities }) => {
     const data = await response.json();
     setUniversities(data);
   };
+
   return (
     <Button variant='contained' onClick={fetchingUni}>
       LOAD

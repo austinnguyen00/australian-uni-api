@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@mui/material';
 
 const AddButton = ({ universities, setUniversities }) => {
+  // Function to add first item to the last of array
   const addFirstItem = () => {
     if (universities.length > 0) {
       console.log('Im here');
