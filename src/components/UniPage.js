@@ -9,17 +9,23 @@ const UniPage = () => {
 
   return (
     <>
-      <h1>Australia Universities</h1>
-      <LoadButton setUniversities={setUniversities}></LoadButton>
-      <DeleteButton
-        universities={universities}
-        setUniversities={setUniversities}
-      ></DeleteButton>
-      <AddButton
-        universities={universities}
-        setUniversities={setUniversities}
-      ></AddButton>
-      <UniTable universities={universities}></UniTable>
+      <div className='header'>
+        <h1>Australia Universities</h1>
+      </div>
+      <div className='container'>
+        <div className='button-wrapper'>
+          <LoadButton setUniversities={setUniversities}></LoadButton>
+          <DeleteButton
+            universities={universities}
+            setUniversities={setUniversities}
+          ></DeleteButton>
+          <AddButton
+            universities={universities}
+            setUniversities={setUniversities}
+          ></AddButton>
+        </div>
+        <UniTable universities={universities}></UniTable>
+      </div>
     </>
   );
 };
