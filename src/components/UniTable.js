@@ -21,25 +21,29 @@ const UniTable = ({ universities }) => {
             <TableCell align='right'>Domains</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
-          {universities.map((university) => (
-            <TableRow
-              key={university.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component='th' scope='row'>
-                {university['name']}
-              </TableCell>
-              <TableCell align='right'>{university.alpha_two_code}</TableCell>
-              <TableCell align='right'>{university.country}</TableCell>
-              <TableCell align='right'>
-                {university['state-province']}
-              </TableCell>
-              <TableCell align='right'>{university.web_pages}</TableCell>
-              <TableCell align='right'>{university.domains}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
+        {universities ? (
+          <TableBody>
+            {universities.map((university) => (
+              <TableRow
+                key={university.name}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+                <TableCell component='th' scope='row'>
+                  {university['name']}
+                </TableCell>
+                <TableCell align='right'>{university.alpha_two_code}</TableCell>
+                <TableCell align='right'>{university.country}</TableCell>
+                <TableCell align='right'>
+                  {university['state-province']}
+                </TableCell>
+                <TableCell align='right'>{university.web_pages}</TableCell>
+                <TableCell align='right'>{university.domains}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        ) : (
+          ''
+        )}
       </Table>
     </TableContainer>
   );
