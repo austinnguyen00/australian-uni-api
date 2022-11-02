@@ -1,11 +1,10 @@
 import './App.css';
-import UniTable from './components/UniTable.js';
+import UniPage from './components/UniPage';
 
 function App() {
   return (
     <div>
-      <h1>Australia Universities</h1>
-      <UniTable></UniTable>
+      <UniPage />
     </div>
   );
 }

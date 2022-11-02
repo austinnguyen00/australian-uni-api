@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -7,23 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-const UniTable = () => {
-  const [universities, setUniversities] = useState([]);
-
-  useEffect(() => {
-    const fetchingUni = async () => {
-      const response = await fetch(
-        'http://universities.hipolabs.com/search?country=Australia'
-      );
-      const data = await response.json();
-      console.log('data:', data);
-      setUniversities(data);
-    };
-
-    fetchingUni();
-    console.log('uni:', universities);
-  }, []);
-
+const UniTable = ({ universities }) => {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label='simple table'>
