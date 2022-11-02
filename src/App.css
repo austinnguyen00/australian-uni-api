@@ -27,3 +27,8 @@
   gap: 30px;
   padding-bottom: 30px;
 }
+
+.table-head{
+  background-color: black;
+  color: white !important;
+}

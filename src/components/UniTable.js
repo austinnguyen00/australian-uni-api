@@ -13,11 +13,19 @@ const UniTable = ({ universities }) => {
       <Table sx={{ minWidth: 650 }} aria-label='simple table'>
         <TableHead>
           <TableRow>
-            <TableCell>University</TableCell>
-            <TableCell align='right'>Code</TableCell>
-            <TableCell align='right'>Country</TableCell>
-            <TableCell align='right'>Web Pages</TableCell>
-            <TableCell align='right'>Domains</TableCell>
+            <TableCell className='table-head'>University</TableCell>
+            <TableCell className='table-head' align='right'>
+              Code
+            </TableCell>
+            <TableCell className='table-head' align='right'>
+              Country
+            </TableCell>
+            <TableCell className='table-head' align='right'>
+              Web Pages
+            </TableCell>
+            <TableCell className='table-head' align='right'>
+              Domains
+            </TableCell>
           </TableRow>
         </TableHead>
         {universities.length > 0 ? (
